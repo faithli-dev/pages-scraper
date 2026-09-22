@@ -130,7 +130,7 @@ function applyMeta(html, meta) {
   }
   if (meta.desc) {
     const desc = escapeAttr(meta.desc);
-    html = html.replace(/<meta\s+name=["']description[#']\s+content=[#'][^"']*["']\s*\/?\s*>/i, `<meta name="description" content="${desc}">`);
+    html = html.replace(/<meta\s+name=["']description["']\s+content=["'][^"']*["']\s*\/?\s*>/i, `<meta name="description" content="${desc}">`);
     html = html.replace(/<meta\s+property=["']og:description["']\s+content=["'][^"']*["']\s*\/?\s*>/i, `<meta property="og:description" content="${desc}">`);
     html = html.replace(/<meta\s+name=["']twitter:description["']\s+content=["'][^"']*["']\s*\/?\s*>/i, `<meta name="twitter:description" content="${desc}">`);
   }
