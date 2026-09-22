@@ -1,0 +1,18 @@
+{
+  "name": "pages-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free same-origin website mirror and recipe-driven retargeting skill.",
+  "scripts": {
+    "mirror": "node .agent/skills/pages-scraper/scripts/mirror.mjs",
+    "outline": "python3 .agent/skills/pages-scraper/scripts/outline-html.py",
+    "retarget": "node .agent/skills/pages-scraper/scripts/retarget.mjs",
+    "check-links": "node .agent/skills/pages-scraper/scripts/check-links.mjs",
+    "workflow": "node .agent/skills/pages-scraper/scripts/workflow.mjs",
+    "check": "node --check .agent/skills/pages-scraper/scripts/mirror.mjs && node --check .agent/skills/pages-scraper/scripts/retarget.mjs && node --check .agent/skills/pages-scraper/scripts/check-links.mjs && node --check .agent/skills/pages-scraper/scripts/workflow.mjs && python3 -m py_compile .agent/skills/pages-scraper/scripts/outline-html.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
